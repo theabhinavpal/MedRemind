@@ -12,5 +12,5 @@ Med Remind is a simple and effective medicine reminder web-application designed 
 
 🛠 Technologies Used
 
-Frontend: HTML, CSS, JavaScript
+Frontend: HTML, CSS, JavaScript.
 Notifications: Web Notifications API / System Sound Alerts
