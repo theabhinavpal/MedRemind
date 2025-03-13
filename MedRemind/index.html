@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedRemind | Your Medication Reminder Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-pills"></i>
+                <h1>MedRemind</h1>
+            </div>
+            <p class="tagline">Never miss a dose again while working</p>
+        </header>
+        
+        <main>
+            <section class="reminder-form-section">
+                <h2>Add New Medication</h2>
+                <form id="medicine-form">
+                    <div class="form-group">
+                        <label for="medicine-name">Medication Name</label>
+                        <input type="text" id="medicine-name" placeholder="Enter medication name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dosage">Dosage</label>
+                            <input type="text" id="dosage" placeholder="Ex: 10mg, 1 pill" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">Time</label>
+                            <input type="time" id="time" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="frequency">Frequency</label>
+                        <select id="frequency" required>
+                            <option value="once">Once</option>
+                            <option value="daily">Daily</option>
+                            <option value="twice-daily">Twice Daily</option>
+                            <option value="custom">Custom</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Notes (Optional)</label>
+                        <textarea id="notes" placeholder="Additional instructions or notes"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary"><i class="fas fa-plus-circle"></i> Add Reminder</button>
+                </form>
+            </section>
+
+            <section class="reminders-section">
+                <h2>Your Medication Reminders</h2>
+                <div id="empty-state" class="empty-state">
+                    <i class="fas fa-clipboard-list"></i>
+                    <p>No medications added yet</p>
+                </div>
+                <ul id="reminders-list"></ul>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 MedRemind App. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out'
+        });
+    </script>
+</body>
+</html>
